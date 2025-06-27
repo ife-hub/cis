@@ -1,0 +1,465 @@
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('fonts/IndieFlower.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.vl0{
+    margin: 0 !important;
+}
+.homepage{
+    background-color: white;
+}
+.topLayout {
+    display: flex;
+    color: #FFF;
+}
+.topText{
+    color: var(--Text, #FAFAFA);
+    font-family: Inter;
+    font-size: var(--sds-typography-body-size-small);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 22.4px */
+}
+.aglogo2 {
+    width: 189.63px;
+    height: 30px;
+    flex-shrink: 0;
+    aspect-ratio: 189.63/30.00;
+}
+.logoHl {
+    justify-content: flex-start;
+    width: 33%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.rl {
+    color: black;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.rl:hover {
+    color: var(--Colour-Primary-primary-500, #2AC652);
+}
+
+.rl {
+    &[highlight] {
+          color: var(--Colour-Primary-primary-500, #2AC652);
+          text-decoration: underline;
+          text-underline-offset: 5px;
+          text-decoration-thickness: 2px;
+        }
+}
+.hl22 {
+    justify-content: center;
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 2vw;
+}
+.navButton {
+    --vaadin-button-background: #FFF;
+    cursor: pointer;
+}
+.iconHl {
+    justify-content: flex-end;
+    width: 33%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+.topNavHl {
+    display: flex;
+    justify-content: space-between; /* Ensures the sections are spaced apart */
+    width: 100%;
+    align-items: center;
+}
+.vl{
+    width: 100%;
+    height: 100vh;
+    background:
+           rgba(0, 0, 0, 0.7) url('images/image8.jpg');
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_h1{
+    width: 70vw;
+    font-size: 90px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+.home_tf1{
+    --vaadin-input-field-background: white;
+    padding-left: 5vw;
+    padding-top: 3vh;
+    --vaadin-input-field-border-color: black;
+    --vaadin-input-field-border-width: 0.5px;
+    --vaadin-input-field-height: 7vh;
+    width: 35vw;
+    --vaadin-input-field-border-radius: 25px;
+    --vaadin-input-field-value-font-weight: 500;
+        font-family: sans-serif;
+        font-size: 21px;
+}
+/* Target the Vaadin TextField with your class */
+.home_tf1::part(input-field) {
+    --vaadin-input-field-background: white;
+    --vaadin-input-field-border-color: black;
+    --vaadin-input-field-border-width: 0.5px;
+    --vaadin-input-field-height: 7vh;
+    --vaadin-input-field-border-radius: 25px;
+    background-color: white;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 0px white !important;
+    box-shadow: 0 0 0px 0px white !important;
+    -webkit-text-fill-color: black !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+.h_checkCred{
+    cursor: pointer;
+    --vaadin-button-background: rgba(0, 123, 255, 0.5);
+    color: white !important;
+    --vaadin-button-border-radius: 15px;
+}
+.h2_h1{
+    font-size: 4em;
+    padding-top: 5vh;
+    font-weight: 200;
+}
+.h2_vl{
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.p2b_div1, .p2b_div2, .p2b_div3 {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.h2_hl{
+    width: 75vw !important;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    margin-top: 10vh;
+}
+.p2b_h1a0, .p2b_h2a0, .p2b_h3a0{
+    text-align: center;
+    color: white;
+}
+.p2b_h1a, .p2b_h2a, .p2b_h3a{
+    text-align: center;
+    font-weight: 100;
+    padding-top: 2vw;
+}
+.p2b_div1a, .p2b_div2a, .p2b_div3a{
+    background-color: rgba(0, 123, 255, 0.7);
+    width: 3vw;
+    height: 5vh;
+    border-radius: 5px;
+}
+.h3_vl{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h3_div{
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+}
+.h3_div1, .h3_div2{
+    height: 60vh;
+    width: 30vw;
+    background-image: url('images/testim.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw 2vh;
+}
+.h3_h1, .h3_h2 {
+    text-align: center;
+    font-size: 3em;
+    width: 27vw;
+}
+.h3_per1, .h3_per2{
+    margin-top: 10vh;
+    font-weight: 200;
+}
+.h3_occ1, .h3_occ2{
+    font-weight: 100;
+    font-size: 1.5em;
+}
+.h44_vl{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h44_div{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+.h44_title{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+
+.h4_vl{
+    background: #000000;
+    margin-top: 100px;
+}
+.h4_dv1, .h4_dv2, .h4_dv3, .h4_dv4, .h4_dv5 {
+    width: 16vw;
+    display: flex;
+    justify-content: center;
+}
+.h4_h54a, .h4_h54b, .h4_h54c{
+    cursor: pointer;
+}
+.h4_h12, .h4_h21, .h4_h31, .h4_h41, .h4_h51{
+    color: var(--Text, #FAFAFA);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 140% */
+}
+.h4_h13, .h4_h22, .h4_h23, .h4_h24, .h4_h25, .h4_h26, .h4_h27,
+.h4_h32, .h4_h33, .h4_h34, .h4_h42, .h4_h43, .h4_h44, .h4_h45{
+    color: var(--Text, #FAFAFA);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+}
+.h4_h52{
+    color: var(--Text, #FAFAFA);
+    font-family: Manrope;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+}
+.h4_h11, .h4_h14{
+    width: 12vw;
+    height: 36.07px;
+}
+.h4_hleb{
+    color: var(--Primary, #FFF);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.h4_vl1{
+    width: 85vw !important;
+        justify-content: center;
+        padding-top: 6vh;
+}
+.h4_h14{
+    --vaadin-input-field-border-color: #FFF;
+    --vaadin-input-field-border-width: 1.5px;
+    --vaadin-input-field-border-radius: 4px;
+    --vaadin-input-field-placeholder-color: var(--Text, #FAFAFA);
+}
+@media screen and (max-width: 865px) {
+    .h4_dv1, .h4_dv2, .h4_dv3, .h4_dv4, .h4_dv5 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .h4_h11, .h4_h14{
+        width: 50%;
+        height: 50%;
+    }
+    .h4_h12, .h4_h21, .h4_h31, .h4_h41, .h4_h51{
+        font-size: 15px;
+    }
+    .h4_h13, .h4_h22, .h4_h23, .h4_h24, .h4_h25, .h4_h26, .h4_h27,
+    .h4_h32, .h4_h33, .h4_h34, .h4_h42, .h4_h43, .h4_h44, .h4_h45{
+        font-size: 15px;
+    }
+    .h4_h52{
+        font-size: 8px;
+    }
+    .h4_hleb{
+        font-size: 12px;
+    }
+}
+.ser_img1, .ser_img2, .ser_img3{
+    width: 35vw;
+    height: 45vh;
+    border-radius: 40px;
+}
+.ser_h12, .ser_h22, .ser_h32{
+    width: 30vw;
+    font-size: 20px;
+    font-weight: 200;
+}
+.ser_vl1, .ser_vl2, .ser_vl3{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 100px;
+}
+.ser_hl1, .ser_hl2, .ser_hl3{
+    padding: 100px;
+}
+.bl2_vl{
+    border: none; /* Remove border */
+      border-radius: 5px; /* Rounded corners */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+.addBlogView{
+    background:
+           rgba(0, 0, 0, 0.7) url('images/blog2.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+}
+.firDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    background-blend-mode: darken;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-radius: 50px;
+    cursor: pointer;
+
+    h1{
+        color: white;
+    }
+}
+
+.bl_h3{
+    font-size: 1.4em;
+    width: 87%;
+    margin-bottom: 1.8vh;
+    font-weight: 100;
+}
+.bl_h2{
+    width: 87%;
+    text-align: left;
+    margin-bottom: 3vh;
+    font-size: 4em;
+}
+.bl_h1{
+    width: 87%;
+    margin-bottom: 10vh;
+    font-style: italic;
+    font-size: 1.7em;
+    font-weight: 100;
+}
+.bl0{
+    margin: 0 !important;
+}
+.bl_h4{
+    margin-top: 10vh;
+    margin-left: 7vw;
+    font-weight: 400;
+    margin-bottom: 3vh;
+}
+.ob_image{
+    width: 26vw;
+    height: 35.56vh;
+    border-radius: 30px;
+}
+.ob_vl{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5vh;
+}
+.ob_hl{
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5vw;
+}
+.ob_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ob_h1{
+    font-size: 1.2em;
+    font-weight: 700;
+    width: 25vw;
+    margin-top: 1vh;
+    margin-bottom: 1.5vh;
+}
+.ob_h2{
+    width: 25vw;
+    font-size: 1em;
+    font-weight: 300;
+}
+.ob_div2{
+    margin-top: 1vh;
+    display: flex;
+    width: 25vw;
+}
+.ob_h3{
+    font-size: 1em;
+    font-weight: 300;
+}
+.ob_h4{
+    font-size: 1em;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+.bl_viewMoreBlogs{
+    align-self: center;
+    --vaadin-button-background: black;
+    --vaadin-button-text-color: white;
+    margin-top: 8vh;
+    cursor: pointer;
+    --vaadin-button-border-radius: 15px;
+    --vaadin-button-min-width: 12vw;
+    --vaadin-button-height: 7vh;
+    --vaadin-button-font-size: 1.1rem;
+}
+.ob_div {
+    transition: all 0.3s ease;
+}
+.ob_div:hover{
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        padding: 20px;
+        border-radius: 20px;
+}
