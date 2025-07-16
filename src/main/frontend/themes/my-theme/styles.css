@@ -463,3 +463,63 @@ input:-webkit-autofill:active {
         padding: 20px;
         border-radius: 20px;
 }
+.hl2 h1{
+    font-size: 25px;
+    font-family: "Papyrus", Times, serif;
+}
+.leftDiv{
+    display: flex;
+    align-items: center;
+}
+.rightDiv{
+    border: 1px solid;
+    border-radius: 30px;
+    box-shadow: 3px 3px 9px;
+    background: #BEBEBE;
+}
+
+.hl2{
+    margin-top: 7vh;
+}
+.sH1{
+    font-size: 25px;
+    font-family: "Papyrus", Times, serif;
+    color: #BEBEBE;
+}
+.invDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 30px;
+    box-shadow: 3px 3px 9px;
+    width: 40vw;
+    height: 30vh;
+    margin-top: 5vh;
+}
+.invDiv h1{
+    font-size: 35px;
+    font-family: "Papyrus", Times, serif;
+}
+.hy1b{
+    width: 25vw;
+    display: flex;
+    justify-content: end;
+}
+.hy1c{
+    width: 35vw;
+}
+.scamDetectorView{
+    background:
+           rgba(0, 0, 0, 0.7) url('images/blog2.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    height: auto;
+    margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+}
+.h4_vl{
+    background: #000000;
+    margin-top: 85vh;
+}

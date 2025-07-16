@@ -44,6 +44,9 @@ public class HomePage extends VerticalLayout {
         Button checkCred = new Button("Check Credibility");
         checkCred.addClassName("h_checkCred");
         checkURLTF.setSuffixComponent(checkCred);
+        checkCred.addClickListener(e -> {
+            UI.getCurrent().navigate("website-reputation-checker/" + checkURLTF.getValue());
+        });
 
         vl.add(h1, checkURLTF);
         return vl;

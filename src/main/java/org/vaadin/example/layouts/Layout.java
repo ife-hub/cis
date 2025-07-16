@@ -13,6 +13,7 @@ import com.vaadin.flow.router.RouterLink;
 import lombok.extern.slf4j.Slf4j;
 import org.vaadin.example.views.BlogView;
 import org.vaadin.example.views.HomePage;
+import org.vaadin.example.views.ScamDetectorView;
 
 @Slf4j
 public class Layout extends AppLayout {
@@ -54,13 +55,14 @@ public class Layout extends AppLayout {
         logoHl.addClassName("logoHl");
         RouterLink link1 = new RouterLink("HOME", HomePage.class);
         RouterLink link2 = new RouterLink("BLOGS", BlogView.class);
+        RouterLink link3 = new RouterLink("REPUTATION CHECKER", ScamDetectorView.class);
 //        RouterLink link3 = new RouterLink("ABOUT", AboutView.class);
 //        RouterLink link4 = new RouterLink("SERVICE", ServicesView.class);
 //        RouterLink link5 = new RouterLink("CONTACT US", ContactUs.class);
-        link1.addClassName("rl"); link2.addClassName("rl");
+        link1.addClassName("rl"); link2.addClassName("rl"); link3.addClassName("rl");
         //link3.addClassName("rl"); link4.addClassName("rl"); link5.addClassName("rl");
         link1.getHighlightAction();
-        hl2.add(link1, link2);
+        hl2.add(link1, link2, link3);
         hl2.addClassName("hl22");
         hl2.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
 
