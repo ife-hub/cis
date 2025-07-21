@@ -1,7 +1,6 @@
 package org.vaadin.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.vaadin.example.MSSQLTableReader;
 import org.vaadin.example.repositories.ServiceRequestMapRepository;
 
@@ -9,17 +8,14 @@ import java.util.*;
 
 @Service
 public class ServiceRequestService {
-
-    private final ServiceRequestMapRepository srmrr;
+    
     private final MSSQLTableReader mtr;
     private Set<String> rqList = new HashSet<>();
     private Set<String> actionList = new HashSet<>();
     private List<Map<String, Object>> results = new ArrayList<>();
 
     @Autowired
-    public ServiceRequestService(ServiceRequestMapRepository srmrr,
-                                 MSSQLTableReader mtr){
-        this.srmrr = srmrr;
+    public ServiceRequestService(MSSQLTableReader mtr){
         this.mtr = mtr;
         results = mtr.getAll();
     }
