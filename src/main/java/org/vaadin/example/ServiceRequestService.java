@@ -2,7 +2,6 @@ package org.vaadin.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.vaadin.example.MSSQLTableReader;
-import org.vaadin.example.repositories.ServiceRequestMapRepository;
 
 import java.util.*;
 
