@@ -17,9 +17,13 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.upload.Upload;
 import com.vaadin.flow.component.upload.receivers.MemoryBuffer;
 import com.vaadin.flow.data.binder.Binder;
+import com.vaadin.flow.router.BeforeEnterEvent;
+import com.vaadin.flow.router.BeforeEnterObserver;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.server.VaadinSession;
 import org.vaadin.example.entities.Blog;
 import org.vaadin.example.entities.Paragraph;
+import org.vaadin.example.layouts.MainLayout;
 import org.vaadin.example.services.BlogService;
 import org.vaadin.example.services.ImageUploadService;
 
@@ -33,8 +37,16 @@ import java.util.concurrent.atomic.AtomicReference;
 import static org.reflections.Reflections.log;
 import com.vaadin.flow.component.UI;
 
-@Route("addBlog")
-public class AddBlogView extends VerticalLayout {
+@Route(value="addBlog", layout = MainLayout.class)
+public class AddBlogView extends VerticalLayout implements BeforeEnterObserver {
+
+    @Override
+    public void beforeEnter(BeforeEnterEvent event) {
+        // Check for "username" in Vaadin session
+        if (VaadinSession.getCurrent().getAttribute("username") == null) {
+            event.rerouteTo("login");
+        }
+    }
 
     private String errorMessage;
     private final BlogService blogService;
