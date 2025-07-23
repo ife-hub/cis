@@ -138,11 +138,6 @@
             <artifactId>unirest-java</artifactId>
             <version>1.4.9</version>
         </dependency>
-         <dependency>
-             <groupId>com.microsoft.sqlserver</groupId>
-             <artifactId>mssql-jdbc</artifactId>
-         </dependency>
-
     </dependencies>
 
     <build>
