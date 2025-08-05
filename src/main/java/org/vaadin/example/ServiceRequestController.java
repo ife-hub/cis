@@ -14,7 +14,8 @@ import java.util.*;
 @CrossOrigin(
         origins = {"http://localhost:5050"},
         allowedHeaders = "*",
-        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
+        allowCredentials = "true"
 )
 public class ServiceRequestController {
 
