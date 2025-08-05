@@ -11,6 +11,11 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(
+        origins = {"http://localhost:5050"},
+        allowedHeaders = "*",
+        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}
+)
 public class ServiceRequestController {
 
     private final ServiceRequestService srmr;
