@@ -12,7 +12,7 @@ import java.util.*;
 @RestController
 @RequestMapping("/api")
 @CrossOrigin(
-        origins = {"http://localhost:5050"},
+        origins = {"http://localhost:5050", "https://cis.hostless.app"},
         allowedHeaders = "*",
         methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
         allowCredentials = "true"
