@@ -60,7 +60,7 @@ public class HomePage extends VerticalLayout {
         Div div = new Div(); div.addClassName("h44_div");
         Div title = new Div(); title.addClassName("h44_title");
 
-        Image vb = new Image("icons/vb.svg", "Vertical Bar");
+        Image vb = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756910712/vb_topcw1.svg", "Vertical Bar");
         vb.addClassName("h_vb");
         vb.setWidth("20px");
         H1 header = new H1("How It Works");
@@ -136,7 +136,7 @@ public class HomePage extends VerticalLayout {
 
         Div title = new Div(); title.addClassName("h44_title");
 
-        Image vb = new Image("icons/vb.svg", "Vertical Bar");
+        Image vb = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756910712/vb_topcw1.svg", "Vertical Bar");
         vb.addClassName("h_vb");
         vb.setWidth("20px");
         H1 header = new H1("Our Services");
@@ -146,7 +146,7 @@ public class HomePage extends VerticalLayout {
         vl.add(div);
 
         HorizontalLayout hl1 = new HorizontalLayout(); hl1.addClassName("ser_hl1");
-        Image img1 = new Image("images/ser1.jpg", "Website Reputation Checker Image"); img1.addClassName("ser_img1");
+        Image img1 = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756910855/ser1_ipn6cn.jpg", "Website Reputation Checker Image"); img1.addClassName("ser_img1");
         VerticalLayout vl1 = new VerticalLayout(); vl1.addClassName("ser_vl1");
         //vl1.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         H1 h11 = new H1("Website Reputation Checker"); h11.addClassName("ser_h11");
@@ -155,7 +155,7 @@ public class HomePage extends VerticalLayout {
         hl1.add(img1, vl1);
 
         HorizontalLayout hl2 = new HorizontalLayout(); hl2.addClassName("ser_hl2");
-        Image img2 = new Image("images/ser2.jpg", "Antivirus Services Image"); img2.addClassName("ser_img2");
+        Image img2 = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756910857/ser2_psw3sx.jpg", "Antivirus Services Image"); img2.addClassName("ser_img2");
         VerticalLayout vl2 = new VerticalLayout(); vl2.addClassName("ser_vl2");
         //vl2.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         H1 h21 = new H1("Antivirus Services"); h21.addClassName("ser_h21");
@@ -164,7 +164,7 @@ public class HomePage extends VerticalLayout {
         hl2.add(vl2, img2);
 
         HorizontalLayout hl3 = new HorizontalLayout(); hl3.addClassName("ser_hl3");
-        Image img3 = new Image("images/ser3.jpg", "API Access Image"); img3.addClassName("ser_img3");
+        Image img3 = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756910855/ser3_bfohof.jpg", "API Access Image"); img3.addClassName("ser_img3");
         VerticalLayout vl3 = new VerticalLayout(); vl3.addClassName("ser_vl3");
         //vl3.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         H1 h31 = new H1("API Access"); h31.addClassName("ser_h31");
@@ -223,7 +223,7 @@ public class HomePage extends VerticalLayout {
         //H1 h13 = new H1("Get 10% off your first order"); h13.addClassName("h4_h13");
         TextField h14 = new TextField(); h14.addClassName("h4_h14");
         h14.setPlaceholder("Enter your email");
-        Image icon1 = new Image("icons/send.svg", "Send Icon");
+        Image icon1 = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911121/send_lxmbz7.svg", "Send Icon");
         icon1.addClassName("h4_icon1");
         Button button1 = new Button(icon1); button1.addClassName("h4_button1");
         h14.setSuffixComponent(button1);
@@ -266,11 +266,11 @@ public class HomePage extends VerticalLayout {
         Div dv5 = new Div(); dv5.addClassName("h4_dv5");
         H1 h51 = new H1("Invite a User"); h51.addClassName("h4_h51");
         H1 h52 = new H1("Get a Discount when you Invite a New User"); h52.addClassName("h4_h52");
-        Image h53 = new Image("images/qr.png", "QR Code"); h53.addClassName("h4_h53");
+        Image h53 = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911137/qr_hbywi8.png", "QR Code"); h53.addClassName("h4_h53");
         HorizontalLayout h54 = new HorizontalLayout(); h54.addClassName("h4_h54");
-        Image h54a = new Image("icons/facebook.svg", "Facebook Link"); h54a.addClassName("h4_h54a");
-        Image h54b = new Image("icons/instagram.svg", "Twitter Link"); h54b.addClassName("h4_h54b");
-        Image h54c = new Image("icons/twitter.svg", "Instagram Link"); h54c.addClassName("h4_h54c");
+        Image h54a = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911120/facebook_fbikd7.svg", "Facebook Link"); h54a.addClassName("h4_h54a"); h54a.getStyle().set("width", "24px").set("height", "24px");
+        Image h54b = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911121/instagram_n3segj.svg", "Instagram Link"); h54b.addClassName("h4_h54b"); h54b.getStyle().set("width", "24px").set("height", "24px");
+        Image h54c = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911350/icons8-x_exh0ji.svg", "X Link"); h54c.addClassName("h4_h54c"); h54c.getStyle().set("width", "24px").set("height", "24px");
         h54.add(h54a, h54b, h54c);
         VerticalLayout vv5 = new VerticalLayout(); vv5.addClassName("h4_vv5");
         vv5.add(h51, h52, h53, h54);
@@ -286,7 +286,7 @@ public class HomePage extends VerticalLayout {
         Hr hr = new Hr(); hr.addClassName("h4_hr");
 
         HorizontalLayout hle = new HorizontalLayout(); hle.addClassName("h4_hle");
-        Image hlea = new Image("icons/copyright.svg", "Copyright Icon"); hlea.addClassName("h4_hlea");
+        Image hlea = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911120/copyright_mhmwfs.svg", "Copyright Icon"); hlea.addClassName("h4_hlea");
         H1 hleb = new H1("Copyright CheckIfScam 2025. All right reserved"); hleb.addClassName("h4_hleb");
         hle.add(hlea, hleb);
 

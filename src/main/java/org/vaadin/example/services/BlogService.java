@@ -2,6 +2,7 @@ package org.vaadin.example.services;
 
 import org.springframework.stereotype.Service;
 import org.vaadin.example.entities.Blog;
+import org.vaadin.example.entities.Paragraph;
 import org.vaadin.example.repositories.BlogRepository;
 
 import java.util.List;
@@ -29,5 +30,9 @@ public class BlogService {
 
     public void deleteBlog(Blog blog){
         blogRepository.delete(blog);
+    }
+
+    public List<Paragraph> getParagraphs(Blog blog){
+        return blog.getParagraphs();
     }
 }

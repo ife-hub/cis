@@ -20,6 +20,7 @@ import org.vaadin.example.services.BlogService;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Route(value="allBlogs", layout= Layout.class)
 public class AllBlogsView extends VerticalLayout {
@@ -75,8 +76,12 @@ public class AllBlogsView extends VerticalLayout {
                     div.add(image, h1, h2, div2);
 
                     div.getStyle().set("cursor", "pointer");
+
+                    AtomicReference<Blog> blogRef = new AtomicReference<>();
+                    blogRef.set(bl);
+
                     div.addClickListener(e -> {
-                        UI.getCurrent().navigate(HomePage.class);
+                        UI.getCurrent().navigate("blogContent/" + blogRef.get().getBlogId());
                     });
 
                     hl.add(div);
@@ -102,7 +107,7 @@ public class AllBlogsView extends VerticalLayout {
         //H1 h13 = new H1("Get 10% off your first order"); h13.addClassName("h4_h13");
         TextField h14 = new TextField(); h14.addClassName("h4_h14");
         h14.setPlaceholder("Enter your email");
-        Image icon1 = new Image("icons/send.svg", "Send Icon");
+        Image icon1 = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911121/send_lxmbz7.svg", "Send Icon");
         icon1.addClassName("h4_icon1");
         Button button1 = new Button(icon1); button1.addClassName("h4_button1");
         h14.setSuffixComponent(button1);
@@ -145,11 +150,11 @@ public class AllBlogsView extends VerticalLayout {
         Div dv5 = new Div(); dv5.addClassName("h4_dv5");
         H1 h51 = new H1("Invite a User"); h51.addClassName("h4_h51");
         H1 h52 = new H1("Get a Discount when you Invite a New User"); h52.addClassName("h4_h52");
-        Image h53 = new Image("images/qr.png", "QR Code"); h53.addClassName("h4_h53");
+        Image h53 = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911137/qr_hbywi8.png", "QR Code"); h53.addClassName("h4_h53");
         HorizontalLayout h54 = new HorizontalLayout(); h54.addClassName("h4_h54");
-        Image h54a = new Image("icons/facebook.svg", "Facebook Link"); h54a.addClassName("h4_h54a");
-        Image h54b = new Image("icons/instagram.svg", "Twitter Link"); h54b.addClassName("h4_h54b");
-        Image h54c = new Image("icons/twitter.svg", "Instagram Link"); h54c.addClassName("h4_h54c");
+        Image h54a = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911120/facebook_fbikd7.svg", "Facebook Link"); h54a.addClassName("h4_h54a"); h54a.getStyle().set("width", "24px").set("height", "24px");
+        Image h54b = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911121/instagram_n3segj.svg", "Instagram Link"); h54b.addClassName("h4_h54b"); h54b.getStyle().set("width", "24px").set("height", "24px");
+        Image h54c = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911350/icons8-x_exh0ji.svg", "X Link"); h54c.addClassName("h4_h54c"); h54c.getStyle().set("width", "24px").set("height", "24px");
         h54.add(h54a, h54b, h54c);
         VerticalLayout vv5 = new VerticalLayout(); vv5.addClassName("h4_vv5");
         vv5.add(h51, h52, h53, h54);
@@ -165,7 +170,7 @@ public class AllBlogsView extends VerticalLayout {
         Hr hr = new Hr(); hr.addClassName("h4_hr");
 
         HorizontalLayout hle = new HorizontalLayout(); hle.addClassName("h4_hle");
-        Image hlea = new Image("icons/copyright.svg", "Copyright Icon"); hlea.addClassName("h4_hlea");
+        Image hlea = new Image("https://res.cloudinary.com/drtlnc2tx/image/upload/v1756911120/copyright_mhmwfs.svg", "Copyright Icon"); hlea.addClassName("h4_hlea");
         H1 hleb = new H1("Copyright CheckIfScam 2025. All right reserved"); hleb.addClassName("h4_hleb");
         hle.add(hlea, hleb);
 

@@ -5,11 +5,11 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-public class Comment {
+public class PendingComment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long commentId;
+    private Long pendingCommentId;
 
     private String commentString;
     private String name;
@@ -21,12 +21,12 @@ public class Comment {
     @JoinColumn(name = "blog_id")
     private Blog blog;
 
-    public Long getCommentId() {
-        return commentId;
+    public Long getPendingCommentId() {
+        return pendingCommentId;
     }
 
-    public void setCommentId(Long commentId) {
-        this.commentId = commentId;
+    public void setPendingCommentId(Long pendingCommentId) {
+        this.pendingCommentId = pendingCommentId;
     }
 
     public String getCommentString() {

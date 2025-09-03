@@ -26,6 +26,9 @@ public class Blog {
     @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Comment> comments = new ArrayList<>();
 
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<PendingComment> pendingComments = new ArrayList<>();
+
     public Long getBlogId() {
         return blogId;
     }
@@ -88,5 +91,13 @@ public class Blog {
 
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    public List<PendingComment> getPendingComments() {
+        return pendingComments;
+    }
+
+    public void setPendingComments(List<PendingComment> pendingComments) {
+        this.pendingComments = pendingComments;
     }
 }
