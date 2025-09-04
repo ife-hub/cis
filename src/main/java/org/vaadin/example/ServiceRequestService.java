@@ -1,5 +1,6 @@
 package org.vaadin.example;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,31 @@ public class ServiceRequestService {
     private Set<String> rqList = new HashSet<>();
     private Set<String> actionList = new HashSet<>();
     private List<Map<String, Object>> results = new ArrayList<>();
-    private static final String FILE_PATH = "src/actions.json";
+    private static final String FILE_PATH = "cis/src/actions.json";
     private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ActionRepository actionRepository;
 
     @Autowired
-    public ServiceRequestService(MSSQLTableReader mtr){
+    public ServiceRequestService(MSSQLTableReader mtr, ActionRepository actionRepository){
         this.mtr = mtr;
+        this.actionRepository = actionRepository;
         results = mtr.getAll();
+    }
+
+    public void saveAction(ActionRequest request) throws JsonProcessingException {
+        ActionEntity entity = new ActionEntity();
+        entity.setEmail(request.getEmail());
+        entity.setAction(request.getAction());
+
+        // Convert "data" map into JSON string
+        String dataJson = objectMapper.writeValueAsString(request.getData());
+        entity.setData(dataJson);
+
+        actionRepository.save(entity);
+    }
+
+    public List<ActionEntity> getAllActions2() {
+        return actionRepository.findAll();
     }
 
     public Set<String> getRqTypes(){

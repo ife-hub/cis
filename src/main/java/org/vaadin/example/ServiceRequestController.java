@@ -115,12 +115,27 @@ public class ServiceRequestController {
         }
     }
 
-    @GetMapping
+    @GetMapping("/kk")
     public List<ActionRequest> getAllActions() {
         try {
             return srmr.getAllActions();
         } catch (IOException e) {
             throw new RuntimeException("Error reading actions file", e);
         }
+    }
+
+    @PostMapping("/saveAction")
+    public String saveAction(@RequestBody ActionRequest request) {
+        try {
+            srmr.saveAction(request);
+            return "Action saved successfully!";
+        } catch (Exception e) {
+            return "Error saving action: " + e.getMessage();
+        }
+    }
+
+    @GetMapping("/getAllActions")
+    public List<ActionEntity> getAllActions2() {
+        return srmr.getAllActions2();
     }
 }
