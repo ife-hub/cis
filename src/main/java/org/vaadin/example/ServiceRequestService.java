@@ -17,7 +17,7 @@ public class ServiceRequestService {
     private Set<String> rqList = new HashSet<>();
     private Set<String> actionList = new HashSet<>();
     private List<Map<String, Object>> results = new ArrayList<>();
-    private static final String FILE_PATH = "actions.json";
+    private static final String FILE_PATH = "src/actions.json";
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Autowired

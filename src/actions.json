@@ -1,0 +1,10 @@
+[ {
+  "email" : "ade@email.com",
+  "data" : {
+    "rqtype" : "RQ Type 3",
+    "stateFrom" : "State From 1",
+    "newActionName" : "New Action",
+    "stateTo" : "State To"
+  },
+  "action" : "New Action"
+} ]
