@@ -17,7 +17,7 @@ public class ActionEntity {
     private String action;
 
     // store JSON string
-    @Lob
+
     @Column(name = "data", columnDefinition = "TEXT")
     private String data;
 

@@ -37,6 +37,7 @@ public class ServiceRequestService {
         // Convert "data" map into JSON string
         String dataJson = objectMapper.writeValueAsString(request.getData());
         entity.setData(dataJson);
+        System.out.println(dataJson);
 
         actionRepository.save(entity);
     }
