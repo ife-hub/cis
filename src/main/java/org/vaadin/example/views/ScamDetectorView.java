@@ -280,7 +280,7 @@ public class ScamDetectorView extends VerticalLayout implements HasUrlParameter<
         hl2.addClassName("hl2");
 
         Div leftDiv = new Div();
-        Image orgPic = new Image(s3, "Agricyclers Logo");
+        Image orgPic = new Image(s3, "Logo");
         leftDiv.add(orgPic);
         leftDiv.addClassName("leftDiv");
         orgPic.getStyle().set("margin-left", "5vw")

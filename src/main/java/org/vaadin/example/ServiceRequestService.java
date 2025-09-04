@@ -1,9 +1,13 @@
 package org.vaadin.example;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.vaadin.example.MSSQLTableReader;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 @Service
@@ -13,6 +17,8 @@ public class ServiceRequestService {
     private Set<String> rqList = new HashSet<>();
     private Set<String> actionList = new HashSet<>();
     private List<Map<String, Object>> results = new ArrayList<>();
+    private static final String FILE_PATH = "actions.json";
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Autowired
     public ServiceRequestService(MSSQLTableReader mtr){
@@ -262,5 +268,27 @@ public class ServiceRequestService {
         boolean exists = !stateFroms.contains(stateString);
 
         return exists;
+    }
+
+    public synchronized void appendAction(ActionRequest request) throws IOException {
+        File file = new File(FILE_PATH);
+
+        List<ActionRequest> existingRequests = new ArrayList<>();
+
+        if (file.exists() && file.length() > 0) {
+            existingRequests = objectMapper.readValue(file, new TypeReference<List<ActionRequest>>() {});
+        }
+
+        existingRequests.add(request);
+
+        objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, existingRequests);
+    }
+
+    public List<ActionRequest> getAllActions() throws IOException {
+        File file = new File(FILE_PATH);
+        if (!file.exists() || file.length() == 0) {
+            return new ArrayList<>();
+        }
+        return objectMapper.readValue(file, new TypeReference<List<ActionRequest>>() {});
     }
 }

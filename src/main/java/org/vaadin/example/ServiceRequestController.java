@@ -1,5 +1,6 @@
 package org.vaadin.example;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.vaadin.example.MSSQLTableReader;
 import org.vaadin.example.ServiceRequestService;
 
+import java.io.IOException;
 import java.util.*;
 
 @RestController
@@ -99,6 +101,26 @@ public class ServiceRequestController {
             return new ResponseEntity<>(srmr.isTerminal(rqType, stateTo), HttpStatus.OK);
         } catch (Exception e){
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/append")
+    public String appendAction(@Valid @RequestBody ActionRequest request) {
+        try {
+            srmr.appendAction(request);
+            return "Action appended successfully!";
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "Error while appending action: " + e.getMessage();
+        }
+    }
+
+    @GetMapping
+    public List<ActionRequest> getAllActions() {
+        try {
+            return srmr.getAllActions();
+        } catch (IOException e) {
+            throw new RuntimeException("Error reading actions file", e);
         }
     }
 }

@@ -128,7 +128,7 @@ public class ReviewComments2 extends VerticalLayout implements HasUrlParameter<S
         grid.addThemeVariants(GridVariant.LUMO_COLUMN_BORDERS);
         grid.addThemeVariants(GridVariant.LUMO_ROW_STRIPES);
         grid.getStyle().set("align-self", "center")
-                .set("width", "30vw")
+                .set("width", "50vw")
                 .set("text-align", "center");
 
         dataProvider = new ListDataProvider<>(list);
